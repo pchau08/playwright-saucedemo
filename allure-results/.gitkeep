@@ -1,0 +1,2 @@
+# This directory is intentionally empty.
+# Allure results are written here during test runs and excluded from git via .gitignore.
