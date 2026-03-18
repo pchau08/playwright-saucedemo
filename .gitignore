@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment — never commit real credentials
+.env
+
+# Playwright artifacts
+test-results/
+playwright-report/
+allure-results/
+allure-report/
+
+# Reports (generated)
+reports/results.json
+
+# Build output
+dist/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp
+*.tmp
+*.temp
