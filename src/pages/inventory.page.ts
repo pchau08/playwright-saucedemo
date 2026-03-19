@@ -52,6 +52,7 @@ export class InventoryPage {
   async goToCart(): Promise<void> {
     await this.cartLink.click();
     await this.page.waitForURL('**/cart.html');
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
   async openMenu(): Promise<void> {
