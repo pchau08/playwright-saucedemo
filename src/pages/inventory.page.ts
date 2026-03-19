@@ -93,10 +93,13 @@ export class InventoryPage {
   }
 
   async addAllItemsToCart(): Promise<void> {
-    const addButtons = this.page.locator('button[data-test^="add-to-cart"]');
-    const count = await addButtons.count();
+    const items = this.inventoryItems;
+    const count = await items.count();
     for (let i = 0; i < count; i++) {
-      await addButtons.nth(i).click();
+      const addButton = items.nth(i).locator('button[data-test^="add-to-cart"]');
+      await addButton.waitFor({ state: 'visible' });
+      await addButton.click();
+      await items.nth(i).locator('button[data-test^="remove"]').waitFor({ state: 'visible' });
     }
   }
 

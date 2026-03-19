@@ -166,9 +166,8 @@ test.describe('Authentication', () => {
     test('should redirect to login if accessing inventory without auth @regression', async ({
       pages,
     }) => {
-      // Navigate directly without logging in
-      await pages.inventoryPage.navigate();
-      // SauceDemo uses client-side redirect — ends up back at root
+      // Navigate directly without logging in — SauceDemo redirects back to root
+      await pages.loginPage.page.goto('/inventory.html');
       await expect(pages.loginPage.page).toHaveURL('/');
     });
 
