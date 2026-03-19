@@ -30,6 +30,7 @@ export class CartPage {
 
   async navigate(): Promise<void> {
     await this.page.goto('/cart.html');
+    await this.page.waitForLoadState("networkidle");
     await expect(this.pageTitle).toBeVisible();
   }
 
