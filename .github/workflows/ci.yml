@@ -8,7 +8,7 @@ on:
 
 env:
   BASE_URL: https://www.saucedemo.com
-  NODE_VERSION: '20'
+  NODE_VERSION: '24'
 
 jobs:
   # ─── Smoke Tests ─────────────────────────────────────────────────────────────
